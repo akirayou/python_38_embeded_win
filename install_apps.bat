@@ -9,19 +9,19 @@ REM バージョンが固定されるので安定した再現環境が見込める
 REM pip install -r requirements.txt
 
 REM 良く使うツール
-pip install jupyterlab matplotlib  pandas scikit-learn scipy numpy
+pip install jupyterlab matplotlib pandas scipy numpy
 
 REM jupyterlabでインタラクティブなmatplotlibを使う時
-pip install ipywidgets ipympl nodejs
-python -m jupyter labextension install @jupyter-widgets/jupyterlab-manager
-python -m jupyter labextension install jupyter-matplotlib
+REM pip install ipywidgets ipympl nodejs
+REM python -m jupyter labextension install @jupyter-widgets/jupyterlab-manager
+REM python -m jupyter labextension install jupyter-matplotlib
 
 
 REM "私が"よく使うツール
 REM pip install pycrypto compoundfiles
 
 REM cmdstanpyをつかうとき
-pip install mako cmdstanpy arviz 
+REM pip install mako cmdstanpy arviz 
 
 
 REM pystanを使う時
