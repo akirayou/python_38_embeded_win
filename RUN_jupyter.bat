@@ -2,6 +2,6 @@
 cd /d %~dp0
 call env.bat
 
-mkdir jupyter
-cd jupyter
-jupyter lab 
+mkdir home\jupyter
+cd home\jupyter
+python -m jupyter lab 

@@ -1,10 +1,11 @@
 @ECHO OFF
 cd /d %~dp0
+mkdir home
 CALL env.bat
 regedit "%BASE_PATH%\longfilepath.reg"
 
 SET DL_URL_PYTHON=https://www.python.org/ftp/python/%PYTHON_VER%/%DL_PYTHON%.zip
-SET DLED_PYTHON=%PYTHON_PATH%.zip
+SET DLED_PYTHON=%PYTHONPATH%.zip
 
 echo Install to %BASE_PATH%
 IF not EXIST "%DLED_PYTHON%" (

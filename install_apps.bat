@@ -2,7 +2,7 @@
 cd /d %~dp0
 CALL env.bat
 
-pip install -U pip
+python -m pip install -U  --upgrade-strategy only-if-needed  pip
 
 REM pip freeze > requirements.txtで作ったソフト一覧を使うにはこれ
 REM バージョンが固定されるので安定した再現環境が見込める
@@ -11,17 +11,21 @@ REM pip install -r requirements.txt
 REM 良く使うツール
 pip install jupyterlab matplotlib  pandas scikit-learn scipy numpy
 
-REM advancedな可視化ツール
-REM pip install ipywidgets widgetsnbextensio
-REM pip install holoviews bokeh plotly pyviz_comms
+REM jupyterlabでインタラクティブなmatplotlibを使う時
+pip install ipywidgets ipympl nodejs
+python -m jupyter labextension install @jupyter-widgets/jupyterlab-manager
+python -m jupyter labextension install jupyter-matplotlib
+
+
+REM "私が"よく使うツール
+REM pip install pycrypto compoundfiles
 
 REM cmdstanpyをつかうとき
-REM pip install mako cmdstanpy arviz 
-REM mkdir tools
+pip install mako cmdstanpy arviz 
 
 
 REM pystanを使う時
-REM pip install mako pystan arviz pycrypto 
+REM pip install mako pystan arviz  
 
 
 REM windowsではnumpyをダウングレートする必要がある（暫定措置)
