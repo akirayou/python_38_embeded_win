@@ -5,6 +5,7 @@ SET DL_PYTHON=python-%PYTHON_VER%-embed-amd64
 SET PYTHONPATH=%BASE_PATH%%DL_PYTHON%
 
 SET PATH=%PYTHONPATH%;%PYTHONPATH%\Scripts;%PATH%
+SET PATH=%BASE_PATH%home\.cmdstan\RTools40\usr\bin;%BASE_PATH%home\.cmdstan\\RTools40\mingw64\bin;%BASE_PATH%home\.cmdstan\RTools40;%BASE_PATH%home\.cmdstan\cmdstan-2.25.0\bin;%PATH%
 
 REM ホームディレクトリを上書きする。 
 REM ホームディレクトリに設定ファイルを書くパケージが以下のフォルダをhomeと見なす
