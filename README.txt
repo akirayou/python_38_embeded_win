@@ -27,3 +27,25 @@ python-3.8.6-embed-amd64\Scriptsにあるexeを直接実行したい場合は
 ただし、さらに追加で依存ライブラリがあることがあるのでこれだけでは普通は解決しない。
 https://www.python.jp/install/windows/install_vstools2017.html
 
+
+
+cmdstan配布時のコツ：
+雑多なインストーラは(node/python/rtoolsの.zip/.exe)は消して酔い(161MB)
+
+
+nodejsはjupyterlabのextensionビルド時のみに必要なので要らなくなったらフォルダ毎けしてよい。
+復帰させるときはinstall_nodejs.batを実行　(74MB)
+
+
+rtoolsはstanのビルドに使うが、ビルドしたバイナリを実行させる場合は不要なので消して良い。
+復帰はinstall_rtools.bat(1.07GB)
+home/.cmdstanも消してよい(353MB)再インストールは以下のコマンド
+python -m cmdstanpy.install_cmdstan
+
+jupyterとcmdstanのバイナリを走らせるだけなら800MB弱
+cmdstanのビルドを行う画場合は2.2G程度になる
+
+
+
+
+

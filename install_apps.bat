@@ -26,7 +26,7 @@ pip install compoundfiles
 
 REM cmdstanpy‚ð‚Â‚©‚¤‚Æ‚«
 call install_rtools.bat
-pip install mako cmdstanpy arviz tqdm
+pip install mako cmdstanpy arviz tqdm ujson
 python -m cmdstanpy.install_cmdstan
 
 
